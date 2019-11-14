@@ -1,0 +1,135 @@
+﻿@using CarInsuranceMvc.Models
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="card-header">
+        <h2>Speedy Car Insurance</h2>
+        <h4>Fill in the form below for a great quote!</h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card">
+        <div class="card-body text-center">
+            <!--CREATING FORM-->
+            @using (Html.BeginForm("Customers", "Home", FormMethod.Post))
+            {
+                <div class="row form-group ">
+                    <!--FIRST NAME-->
+                    <div class="col-md-3 text-right">
+                        First Name:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                    </div>
+                </div>
+                <div class="row form-group ">
+                    <!--LAST NAME-->
+                    <div class="col-md-3 text-right">
+                        Last Name:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                    </div>
+                </div>
+
+                <div class="row form-group ">
+                    <!--EMAIL-->
+                    <div class="col-md-3 text-right">
+                        Email Address:
+                    </div>
+                    <div class="col-md-9 ">
+                        <input name="EmailAdd" type="email" class="form-control" placeholder="Email Address" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <!--DOB-->
+                    <div class="col-md-3 text-right">
+                        Date of Birth:
+                    </div>
+                    <div class="col-md-9 ">
+                        <input name="BirthDate" type="date" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <!-- CAR YEAR-->
+                    <div class="col-md-3 text-right">
+                        Car Year:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="CarYear" type="text" class="form-control" placeholder="Car Year" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <!-- CAR MAKE -->
+                    <div class="col-md-3 text-right">
+                        Car Make:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <!-- CAR MODEL-->
+                    <div class="col-md-3 text-right">
+                        Car Model:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <!-- DUI -->
+                    <div class="col-md-3 text-right">
+                        Have you ever had a DUI:
+                    </div>
+                    <div class="col-md-2">
+                        <input name="Dui" type="radio" class="form-control" value="true" />Yes<br />
+                    </div>
+                    <div class="col-md-2 ">
+                        <input name="Dui" type="radio" class="form-control" value="false" />No<br />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <!-- SPEEDING TIX-->
+                    <div class="col-md-3 text-right">
+                        Number of speeding tickets:
+                    </div>
+                    <div class="col-md-9 ">
+                        <input name="SpeedTix" type="text" class="form-control" placeholder="" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <!-- COVERAGE-->
+                    <div class="col-md-3 text-right">
+                        Would you like full coverage or liability:
+                    </div>
+                    <div class="col-md-2 ">
+                        <input name="Coverage" type="radio" class="form-control" value="full coverage" checked />Full Coverage<br />
+                    </div>
+                    <div class="col-md-2 ">
+                        <input name="Coverage" type="radio" class="form-control" value="liability" />Liability<br />
+                    </div>
+                </div>
+
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-block">Get me a quote now!</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

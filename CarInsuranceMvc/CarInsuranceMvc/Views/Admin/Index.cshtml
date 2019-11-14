@@ -1,0 +1,54 @@
+﻿@using CarInsuranceMvc.ViewModels
+@model List<CustomersVm>
+
+<div class="row">
+    <div class="card">
+        <div class="card-header text-left">
+            <h2>Speedy Car Insurance | Admin Page</h2>
+            <h4 class="m-0">Insurance Quotes</h4>
+        </div>
+        <div class="card-body">
+            <div class="row form-group ">
+                <!--FIRST NAME-->
+                <div class="col-md-3">
+                   <h5>First Name</h5>
+                </div>
+                <!--LAST NAME-->
+                <div class="col-md-3">
+                    <h5>Last Name</h5>
+                </div>
+                <!--EMAIL-->
+                <div class="col-md-3">
+                    <h5>Email</h5>
+                </div>
+                <!-- INSURANCE QUOTE -->
+                <div class="col-md-3">
+                    <h5>Quote</h5>
+                </div>
+            </div>
+            <!--Loop through each customer row in database-->
+            @foreach (var customer in Model)
+            {
+                <div class="row form-group ">
+                    <!--FIRST NAME-->
+                    <div class="col-md-3">
+                        @customer.FirstName
+                    </div>
+                    <!--LAST NAME-->
+                    <div class="col-md-3">
+                        @customer.LastName
+                    </div>
+                    <!--EMAIL-->
+                    <div class="col-md-3">
+                        @customer.EmailAdd
+                    </div>
+                    <!-- INSURANCE QUOTE -->
+                    <div class="col-md-3">
+                        @customer.InsuranceQuote
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

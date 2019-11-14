@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarInsurance_CustomersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CarInsurance_Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAdd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="CarYear" Type="Int32" />
+    <Property Name="CarMake" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CarModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DUI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SpeedingTickets" Type="Int32" />
+    <Property Name="CoverageType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InsuranceQuote" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="CarInsurance_CustomersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CarInsurance_Customers" EntityType="Self.CarInsurance_Customers" />
+  </EntityContainer>
+</Schema>
