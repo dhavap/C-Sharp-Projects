@@ -1,0 +1,24 @@
+﻿
+@if (ViewBag.FavFruit == "apples")
+{
+    <h1> Great choice @ViewBag.FName!</h1>
+    <p>
+        They rank among the top three fruits produced around the world.
+        Due to their ease of transport, they are typically available year-round in the U.S.
+    </p>
+    <a class="btn btn-warning" href="https://www.hsph.harvard.edu/nutritionsource/food-features/apples/" role="button">Click here to learn more about apples!</a>
+}
+else if (ViewBag.FavFruit == "oranges")
+{
+    <h1> Excellent selection @ViewBag.FName!</h1>
+    <p>The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae, native to China.</p>
+    <a class="btn btn-warning" href="https://www.livescience.com/45057-oranges-nutrition-facts.html" role="button">Click here to learn more about oranges!</a>
+}
+else if (ViewBag.FavFruit == "pears")
+{
+    <h1> Wonderful selection @ViewBag.FName!</h1>
+    <p> Pears are a unique fruit in that they ripen best off the tree. As such pears are transported when they’re fully mature, but not always ripe.</p>
+    <a class="btn btn-warning" href="https://usapears.org/fun-facts-faqs/" role="button">Click here to learn more about pears!</a>
+}
+
+

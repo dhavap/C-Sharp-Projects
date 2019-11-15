@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>What is your favourite fruit?</h1>
+    <p class="lead">What's your favourite fruit and how does it stack up against other fruits? Complete the survey below and find out now!</p>
+</div>
+
+<div class="row">
+    <div class="card">
+        <div class="card-body text-center">
+            <!--CREATING FORM-->
+            @using (Html.BeginForm("Users", "Home", FormMethod.Post))
+            {
+                <div class="row form-group ">
+                    <!--FIRST NAME-->
+                    <div class="col-md-3 text-right">
+                        First Name:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="FName" type="text" class="form-control" placeholder="First Name" />
+                    </div>
+                </div>
+                <div class="row form-group ">
+                    <!--LAST NAME-->
+                    <div class="col-md-3 text-right">
+                        Last Name:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="LName" type="text" class="form-control" placeholder="Last Name" />
+                    </div>
+                </div>
+                <div class="row form-group ">
+                    <!--Age-->
+                    <div class="col-md-3 text-right">
+                        Age:
+                    </div>
+                    <div class="col-md-9">
+                        <input name="Age" type="number" min="1" class="form-control" placeholder="Age" />
+                    </div>
+                </div>
+                <div class="row form-group ">
+                    <!--Age-->
+                    <div class="col-md-3 text-right">
+                        Favourite Fruit:
+                    </div>
+                    <div class="col-md-9">
+                        <select class="form-control" name="FavFruit">
+                            <option value="apples">Apples</option>
+                            <option value="oranges">Oranges</option>
+                            <option value="pears">Pears</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col"><button type="submit" class="btn btn-warning btn-block">Submit!</button></div>
+            }
+        </div>
+    </div>
+</div>
+
